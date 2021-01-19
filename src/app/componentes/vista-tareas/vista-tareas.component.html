@@ -1,0 +1,44 @@
+<div class="contenido-centrado">
+  <div class="gestor-tareas-container">
+    <div class="sidebar has-background-white">
+      <h1 class="titulo has-text-weight-bold">
+        Listas
+      </h1>
+      <div class="menu-lista has-text-weight-semibold">
+        <a *ngFor="let lista of listas" class="menu-lista-item {{isActive(lista)}}" routerLinkActive="is-active" (click)="onSelect(lista)">
+          <p>{{lista.nombre}}</p>
+        </a>
+      </div>
+
+      <button class="btn" routerLink="nueva-lista">
+        Nueva Lista <span class="has-text-weight-semibold">+</span>
+      </button>
+
+    </div>
+    <div class="lista-tareas-container has-background-light">
+      <div class="top-bar">
+        <h1 class="titulo has-text-weight-bold" style="font-size: 30px;">
+          Tareas
+        </h1>
+
+        <button class="btn-borrar button" style="margin-right:10px;" (click)="borrar()"> <p style="margin-right: 3px;">Borrar</p>  <img src="../../../assets/delete.png"></button>
+        <button class="btn-editar button"> Editar <img src="../../../assets/edit.png"></button>
+
+      </div>
+      <div *ngFor="let tarea of tareas" class="check level tarea {{tareaCompletada(tarea)}} nombre-tarea is-left">
+        <p id="tarea-id" class="{{tareaCompletada(tarea)}} nombre-tarea is-left">{{tarea.nombre}}</p>
+        <div class="level-righ">
+          <button class="btn-borrar-t button " style="margin-right:10px;" (click)="borrarTarea(tarea)"> <p style="margin-right: 3px;"></p>
+           <img src="../../../assets/delete.png">
+          </button>
+          <button class="btn-editar-t button " (click)="editarTarea(tarea)"> <img src="../../../assets/edit.png"></button>
+          <input id="check" type="checkbox" class="checkbox" (click)="completarTarea(tarea)" >
+        </div>
+
+      </div>
+      <button class="btn-agregar btn" (click)="nuevaTarea()">
+        <img src="../../../assets/plus.png">
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,223 @@
+@import '../../../main-styles.scss';
+
+.gestor-tareas-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  max-height: 480px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  background: white;
+  padding: 3%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.lista-tareas-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 5%;
+  position: relative;
+
+  .top-bar{
+    display: flex;
+    margin-bottom: 0;
+    .titulo {
+      flex-grow: 1;
+      margin: 0;
+    }
+  }
+}
+
+.titulo {
+  font-family: 'Open Sans';
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: $negro;
+}
+
+p {
+  font-family: $family-sans-serif;
+}
+
+.menu-lista{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  flex-grow: 1;
+  .menu-lista-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    width: 100%;
+    color: $azuloscuro;
+    text-decoration: none;
+
+    &:hover {
+      background: $grisclaro;
+    }
+
+    &.is-active {
+      background: linear-gradient(to right , $azulclaro, $grisclaro);
+      color: $negro
+    }
+  }
+}
+
+.btn {
+  background: $azuloscuro;
+  font-family: 'Open Sans';
+  color: $grisclaro;
+
+  &:hover {
+    background: $azulclaro;
+    color: $azuloscuro;
+    font-weight: bold;
+  }
+
+  &:not(.btn-borrar-clic) {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 3px rgba(0, 23, 153, 0.301);
+    }
+    &:active{
+      transform: scale(0.90);
+    }
+  }
+}
+
+.btn-borrar {
+  background: #a1261ee3;
+  font-family: 'Open Sans';
+  color: $grisclaro;
+
+  &:not(.btn-borrar-clic) {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.26);
+    }
+    &:active{
+      transform: scale(0.90);
+    }
+  }
+}
+
+.btn-editar {
+  background: #00796B;
+  font-family: 'Open Sans';
+  color: $grisclaro;
+  box-shadow: none;
+  &:not(.btn-editar-clic) {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 2px #00796b51;
+    }
+    &:active{
+      transform: scale(0.90);
+    }
+  }
+}
+
+
+.tarea {
+  display: flex;
+  margin-top: 15px;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-bottom: 0;
+  .check {
+    display: flex;
+  }
+  .tarea-completada {
+    opacity: 0.5;
+    text-decoration: line-through;
+  }
+}
+
+.btn-agregar {
+  height: 50px;
+  width: 50px;
+  background: $azuloscuro;
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  border-radius: 50%;
+  &:not(.btn-agregar-clic) {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 2px #00790a51;
+      background:rgba(0, 109, 64, 0.767)
+    }
+    &:active{
+      transform: scale(0.95);
+    }
+  }
+}
+
+.btn-borrar-t {
+  background: #a1261ee3;
+  font-family: 'Open Sans';
+  color: $grisclaro;
+  border-radius: 40%;
+
+  &:not(.btn-borrar-clic) {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.26);
+    }
+    &:active{
+      transform: scale(0.90);
+    }
+  }
+}
+
+.btn-editar-t {
+  background: $azuloscuro;
+  font-family: 'Open Sans';
+  color: $grisclaro;
+  box-shadow: none;
+  border-radius: 40%;
+  margin-right: 10px;
+  &:not(.btn-editar-clic) {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 0 2px #00796b51;
+    }
+    &:active{
+      transform: scale(0.90);
+    }
+  }
+}
+
+
+.checkbox {
+  margin-top: 12px;
+}
+
+
+
+

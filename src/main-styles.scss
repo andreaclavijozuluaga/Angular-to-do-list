@@ -1,0 +1,61 @@
+//GLOBAL STYLES
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&family=Roboto&display=swap');
+
+$morado: #3F51B5;
+$negro: #212121;
+$azulclaro: #C5CAE9;
+$azuloscuro: #303F9F;
+$grisclaro: #f8f8f8;
+
+$family-sans-serif: "Raleway", sans-serif;
+$primary: $negro;
+
+$link: $azulclaro;
+
+$borde-control: 2px;
+$color_borde-input: transparent;
+$sombra-input: none;
+
+body {
+  background: linear-gradient(to right top, $morado, $negro);
+}
+
+.contenido-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+.modal-box {
+  min-height: 100px;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  border-radius: 8px;
+  padding: 3%;
+}
+
+.titulo {
+  font-family: 'Open Sans';
+  color: $negro;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background: $azuloscuro;
+  font-family: 'Open Sans';
+  color: $grisclaro;
+
+  &:hover {
+    background: $azulclaro;
+    color: $azuloscuro;
+    font-weight: bold;
+  }
+}
